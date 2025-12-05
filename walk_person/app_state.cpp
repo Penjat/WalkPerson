@@ -1,3 +1,7 @@
+#include "app_state.h"
+// #include "lcd_service.h"
+
+
 //System
 
 long previousMillis = 0;
@@ -22,6 +26,6 @@ int rotaryPressed = false;
 
 // Display
 
-int displayMode = DISPLAY_INPUT_TEST;
+// int displayMode = DISPLAY_INPUT_TEST;
 
 

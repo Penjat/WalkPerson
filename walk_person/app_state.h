@@ -1,3 +1,7 @@
+// #ifndef APP_STATE_H
+// #define APP_STATE_H
+// #include "lcd_service.h"
+
 // System
 extern long previousMillis;
 extern long lastUpdate;
@@ -27,4 +31,4 @@ extern int rotaryPressed;
 
 // Display
 
-extern int displayMode;
+// extern int displayMode;
