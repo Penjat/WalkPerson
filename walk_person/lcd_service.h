@@ -2,6 +2,7 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
+#include "app_state.h"
 
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 32
@@ -27,9 +28,10 @@ void updateDisplay() {
 
 	// Volume Bar
 	// display.setCursor(0,0);
+	int volumeBarHeight =  map(volumeKnobValue, 0, 1023, 31, 1);
 	display.drawRect(0, 0, 8, 31, SSD1306_WHITE);
 
-	display.fillRect(1, 31-20, 6, 31, SSD1306_WHITE);
+	display.fillRect(1, volumeBarHeight, 6, 31, SSD1306_WHITE);
 	// display.drawRect(32, 0, 31, 31, SSD1306_WHITE);
 	// display.drawRect(64, 0, 31, 31, SSD1306_WHITE);
 	// display.drawRect(96, 0, 31, 31, SSD1306_WHITE);
