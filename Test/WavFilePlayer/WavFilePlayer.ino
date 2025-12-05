@@ -109,7 +109,7 @@ void playFile(const char *filename)
     // has the optional volume pot soldered
     //float vol = analogRead(15);
     //vol = vol / 1024;
-    // sgtl5000_1.volume(vol);
+    sgtl5000_1.volume(vol);
   }
 }
 
