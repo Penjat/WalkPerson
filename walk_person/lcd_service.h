@@ -32,6 +32,23 @@ void updateDisplay() {
 	display.drawRect(0, 0, 8, 31, SSD1306_WHITE);
 
 	display.fillRect(1, volumeBarHeight, 6, 31, SSD1306_WHITE);
+
+
+
+
+
+
+	// Pitch 
+	// int pitch =  map(volumeKnobValue, 0, 1023, 31, 1);
+	display.drawRect(12, 23, 20, 31, SSD1306_WHITE);
+
+
+
+
+	// Pitch 
+	// int pitch =  map(volumeKnobValue, 0, 1023, 31, 1);
+	display.drawRect(12, 23, 20, 31, SSD1306_WHITE);
+
 	// display.drawRect(32, 0, 31, 31, SSD1306_WHITE);
 	// display.drawRect(64, 0, 31, 31, SSD1306_WHITE);
 	// display.drawRect(96, 0, 31, 31, SSD1306_WHITE);

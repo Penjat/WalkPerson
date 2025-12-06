@@ -1,9 +1,9 @@
 // Inputs
 
-#define TEMPO_KNOB A0
-#define PITCH_KNOB A1
-#define TIME_LOW_KNOB A2
-#define TIME_HIGH_KNOB A3
+#define TEMPO_KNOB 39
+#define PITCH_KNOB 40
+#define TIME_LOW_KNOB 38
+#define TIME_HIGH_KNOB 41
 #define VOLUME_KNOB 15
 
 #define ROTARY_1 32
