@@ -5,13 +5,14 @@
 
 
 void setup() {
-  // setupInputs();
+  setupInputs();
+  setupAudio();
   setupLCD();
 }
 
 
 void loop() {
-  // readInputs();
+  readInputs();
 
   // updateAudio();
 

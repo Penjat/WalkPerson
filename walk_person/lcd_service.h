@@ -9,8 +9,7 @@
 #define SCREEN_ADDRESS 0x3C
 #define OLED_RESET -1
 
-// Display Modes
-#define DISPLAY_INPUT_TEST 0
+
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 

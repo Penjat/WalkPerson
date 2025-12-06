@@ -11,3 +11,7 @@
 #define ROTARY_PRESS 29
 #define BUTTON_R 28
 #define BUTTON_L 28
+
+
+#define SDCARD_MOSI_PIN 7
+#define SDCARD_SCK_PIN 14
