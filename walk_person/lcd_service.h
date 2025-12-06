@@ -23,31 +23,38 @@ void setupLCD() {
   }
 }
 
+
+#define VOLUME_BAR_WIDTH 6
+
+
 void updateDisplay() {
 	display.clearDisplay();
 
 	// Volume Bar
 	// display.setCursor(0,0);
 	int volumeBarHeight =  map(volumeKnobValue, 0, 1023, 31, 1);
-	display.drawRect(0, 0, 8, 31, SSD1306_WHITE);
+	display.drawRect(0, 0, VOLUME_BAR_WIDTH, display.height()-1, SSD1306_WHITE);
 
-	display.fillRect(1, volumeBarHeight, 6, 31, SSD1306_WHITE);
-
-
+	display.fillRect(1, volumeBarHeight, VOLUME_BAR_WIDTH - 2, display.height()-1, SSD1306_WHITE);
 
 
-
-
-	// Pitch 
-	// int pitch =  map(volumeKnobValue, 0, 1023, 31, 1);
-	display.drawRect(12, 23, 20, 31, SSD1306_WHITE);
-
+	display.drawRect(display.width() - VOLUME_BAR_WIDTH - 1, 0, VOLUME_BAR_WIDTH, display.height()-1, SSD1306_WHITE);
+	display.drawRect(display.width() - VOLUME_BAR_WIDTH * 2 - 2, 0, VOLUME_BAR_WIDTH, display.height()-1, SSD1306_WHITE);
 
 
 
 	// Pitch 
 	// int pitch =  map(volumeKnobValue, 0, 1023, 31, 1);
-	display.drawRect(12, 23, 20, 31, SSD1306_WHITE);
+	// display.drawRect(12, 23, 20, 31, SSD1306_WHITE);
+	display.setCursor(0,0);
+
+
+	// Time
+	display.fillRect(VOLUME_BAR_WIDTH + 2, display.height()-5, display.width() - VOLUME_BAR_WIDTH * 3 - 3, 4, SSD1306_WHITE);
+
+	// Pitch 
+	// int pitch =  map(volumeKnobValue, 0, 1023, 31, 1);
+	// display.drawRect(12, 23, 20, 31, SSD1306_WHITE);
 
 	// display.drawRect(32, 0, 31, 31, SSD1306_WHITE);
 	// display.drawRect(64, 0, 31, 31, SSD1306_WHITE);
