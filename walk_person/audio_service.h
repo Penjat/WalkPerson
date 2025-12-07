@@ -25,12 +25,9 @@ AudioConnection patch_dac (mix, audioOutput);
 
 AudioControlSGTL5000     sgtl5000_1;
 
-// Use these with the Teensy Audio Shield
-// #define SDCARD_CS_PIN    10
-#define SDCARD_MOSI_PIN  7   // Teensy 4 ignores this, uses pin 11
-#define SDCARD_SCK_PIN   14  // Teensy 4 ignores this, uses pin 13
 
-// Use these with the Teensy 3.5 & 3.6 & 4.1 SD card
+#define SDCARD_MOSI_PIN 7
+#define SDCARD_SCK_PIN 14
 #define SDCARD_CS_PIN    BUILTIN_SDCARD
 
 void updateAudio() {
@@ -39,10 +36,6 @@ void updateAudio() {
 
 void setupAudio() {
 	AudioMemory(15);
-
-  // Comment these out if not using the audio adaptor board.
-  // This may wait forever if the SDA & SCL pins lack
-  // pullup resistors
   sgtl5000_1.enable();
   sgtl5000_1.volume(0.5);
 

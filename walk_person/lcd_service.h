@@ -50,7 +50,11 @@ void updateDisplay() {
 
 
 	// Time
-	display.fillRect(VOLUME_BAR_WIDTH + 2, display.height()-5, display.width() - VOLUME_BAR_WIDTH * 3 - 3, 4, SSD1306_WHITE);
+	display.drawRect(6 + 2, display.height()-5, display.width() - VOLUME_BAR_WIDTH * 3 - 3, 4, SSD1306_WHITE);
+
+	// int timeStart = map(timeLowKnobValue, 0, 1023, display.width() - VOLUME_BAR_WIDTH * 3 - 3, 0) + 6 + 2;
+	// int timeEnd = map(timeHighKnobValue, 0, 1023, 0, display.width() - VOLUME_BAR_WIDTH * 3 - 3) - timeLowKnobValue;
+	display.fillRect(88, display.height()-5, -25, 4, SSD1306_WHITE);
 
 	// Pitch 
 	// int pitch =  map(volumeKnobValue, 0, 1023, 31, 1);
