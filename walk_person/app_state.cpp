@@ -28,4 +28,5 @@ int rotaryPressed = false;
 
 // int displayMode = DISPLAY_INPUT_TEST;
 
-
+// Display Modes
+// #define DISPLAY_INPUT_TEST 0

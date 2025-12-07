@@ -2,6 +2,9 @@
 #include "hardware_config.h"
 
 void setupInputs() {
+  
+  Serial.begin(9600);
+
   pinMode(ROTARY_1, INPUT);
   pinMode(ROTARY_2, INPUT);
   pinMode(ROTARY_PRESS, INPUT);
